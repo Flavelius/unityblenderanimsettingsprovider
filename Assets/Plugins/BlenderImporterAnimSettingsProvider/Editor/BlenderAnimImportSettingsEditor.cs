@@ -41,7 +41,7 @@ public class BlenderAnimImportSettingsEditor : Editor
             }
             GUILayout.EndHorizontal();
             GUILayout.BeginVertical(EditorStyles.helpBox);
-            EditorGUILayout.HelpBox("Automatically applies the importer patch when the settings are loaded (usually on editor start).\nOnly really useful if this setting should be shared in team-projects", MessageType.Info);
+            EditorGUILayout.HelpBox("Automatically applies the importer patch when the settings are loaded (usually on editor start).\nMainly useful if this setting should be shared in team-projects or when updating unity versions", MessageType.Info);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("autoApply"),new GUIContent("Auto Apply"));
             EditorGUILayout.EndVertical();
             serializedObject.ApplyModifiedPropertiesWithoutUndo();
