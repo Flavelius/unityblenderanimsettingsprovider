@@ -58,7 +58,7 @@ internal class BlenderAnimImportSettings : ScriptableObject
         DestroyImmediate(asset, false);
         path = new FileInfo(path).Directory?.FullName;
         if (string.IsNullOrEmpty(path)) return "Assets/Editor/" + nameof(BlenderAnimImportSettings) + ".asset";
-        return Path.Combine(path, nameof(BlenderAnimImportSettings) + ".asset");
+        return Path.Combine("Assets" + path.Substring(Application.dataPath.Length), nameof(BlenderAnimImportSettings) + ".asset");
     }
 
     void AutoApplyIfNecessary()
